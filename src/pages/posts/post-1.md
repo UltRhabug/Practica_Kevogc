@@ -1,25 +1,23 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Mi primera publicación en el blog'
-pubDate: 2022-07-01
-description: 'Este es la primera publicación de mi nuevo blog Astro.'
-author: 'Alumno de Astro'
+title: 'Controles electrónicos de juez para karate'
+pubDate: 2025-11-03
+description: 'Diseñé e implementé un sistema de controles electrónicos para jueces en competencias de karate.'
+author: 'Beto'
 image:
-  url: 'https://docs.astro.build/assets/rose.webp'
-  alt: 'El logotipo de Astro sobre un fondo oscuro con un brillo rosado.'
-tags: ["astro", "bloguear", "aprender en público"]
+  url: 'https://placehold.co/600x400/163625/edefe4?text=ESP32'
+  alt: 'Ilustración de un microcontrolador ESP32 sobre un fondo verde tipo PCB.'
+tags: ["embebidos", "esp32", "karate"]
 ---
 
-¡Bienvenido a mi *nuevo blog* sobre el aprendizaje de Astro! Aquí, voy a compartir mi viaje de aprendizaje a medida que construyo un nuevo sitio web.
+Uno de mis proyectos favoritos hasta ahora: un sistema de controles electrónicos para que los jueces califiquen combates de karate en tiempo real, sin papel y sin discusiones sobre quién levantó la bandera primero.
 
-## Lo que he conseguido
+## Lo que resolví
 
-1. **Instalación de Astro**: En primer lugar, he creado un nuevo proyecto Astro y configurado mis cuentas en línea.
-
-2. **Creación de páginas**: Luego aprendí cómo hacer páginas creando nuevos archivos `.astro` y colocándolos en la carpeta `src/pages/`.
-
-3. **Creación de publicaciones**: ¡Esta es mi primera publicación! ¡Ahora tengo páginas de Astro y publicaciones en Markdown!
+1. **Entrada de jueces**: botones dedicados por juez, con antirrebote (debounce) en firmware.
+2. **Agregación de puntuación**: la lógica corre directo en el microcontrolador, sin depender de conexión a internet en el tatami.
+3. **Visualización clara**: salida pensada para que el público entienda el resultado al instante.
 
 ## Próximos pasos
 
-Terminaré el tutorial de Astro, y luego seguiré añadiendo más publicaciones. Mira este espacio para más por venir.
+Quiero conectar este sistema con AxDeport para que los resultados de cada combate se registren automáticamente en la plataforma.

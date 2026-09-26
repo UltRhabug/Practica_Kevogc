@@ -1,29 +1,23 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: Mi cuarta entrada en el blog
-author: Alumno de Astro
-description: "Esta entrada aparecerá sola!"
+title: 'Por qué le estoy entrando a Rust para sistemas embebidos'
+author: 'Beto'
+description: 'Mi razonamiento para estudiar Rust como parte de mi perfil híbrido hardware/software.'
 image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "La palabra 'astro' contra una ilustración de planetas y estrellas."
-pubDate: 2022-08-08
-tags: ["astro", "éxitos"]
+  url: 'https://placehold.co/600x400/163625/edefe4?text=Rust'
+  alt: 'Ilustración esquemática de un chip con el engranaje de Rust.'
+pubDate: 2025-12-15
+tags: ["rust", "embebidos", "carrera"]
 ---
 
-# Mi cuarta entrada en el blog
+# Rust + Python + embebidos
 
-¡Esta es mi cuarta entrada en el blog!
+Estoy apuntando a una especialización poco común: Python para prototipar rápido, Rust para firmware serio, y sistemas embebidos como terreno de juego.
 
-Estoy aprendiendo cada vez más sobre Astro y cómo crear sitios web utilizando componentes, layouts y Markdown.
+## Por qué
 
-## Lo que he aprendido
+Vengo de Arduino y ESP32 en C/C++. Rust me da las mismas garantías de bajo nivel, pero con un compilador que me detiene antes de que cometa errores de memoria clásicos en firmware.
 
-Hasta ahora he aprendido a crear páginas con Astro, reutilizar componentes y utilizar plantillas para evitar repetir código.
+## Siguientes pasos
 
-También aprendí que puedo escribir mis publicaciones utilizando Markdown y dejar que Astro se encargue de generar las páginas automáticamente.
-
-## Próximos pasos
-
-Seguiré aprendiendo Astro y agregando nuevas publicaciones a mi blog.
-
-¡Esta entrada debería aparecer automáticamente junto con las demás entradas!
+Seguir el roadmap que ya traigo para Python, y empezar a portar alguno de mis proyectos con ESP32 a Rust usando `embassy` o `esp-hal`.

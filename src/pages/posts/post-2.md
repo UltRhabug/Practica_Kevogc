@@ -1,15 +1,19 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Mi segunda publicación en el blog'
-author: 'Alumno de Astro'
-description: 'Después de aprender un poco de Astro, ¡no podía parar!'
+title: 'AxDeport: de mockup a portal de jueces funcional'
+author: 'Beto'
+description: 'Cómo Leonardo y yo pasamos de wireframes en HTML/CSS a un portal de jueces con React, Vite y Firebase.'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
-  alt: 'El logotipo de Astro sobre un fondo oscuro con un arco degradado en tonos púrpura.'
-pubDate: 2022-07-08
-tags: ["astro", "bloguear", "aprender en público", "éxitos"]
+  url: 'https://placehold.co/600x400/163625/edefe4?text=AxDeport'
+  alt: 'Diagrama simple representando un portal web con varios módulos conectados.'
+pubDate: 2025-11-17
+tags: ["axdeport", "react", "firebase"]
 ---
 
-Después de una exitosa primera semana aprendiendo Astro, decidí probar un poco más.
+AxDeport nació como proyecto escolar, pero Leonardo y yo lo estamos empujando como algo más: una plataforma real para administrar eventos de deportes de combate.
 
-Escribí e importé un pequeño componente de memoria.
+Empezamos con mockups interactivos en HTML/CSS para cinco módulos distintos. De ahí construimos el portal de jueces con React y Vite, con autenticación de Firebase y calificación multi-juez sincronizada en Firestore.
+
+También armamos un portal para academias/profesores con integración de Storage, para que cada escuela pueda subir su propio material.
+
+Lo siguiente en la lista: conectar este portal con los controles electrónicos de karate que documenté en la publicación anterior.

@@ -4,6 +4,11 @@ import Greeting from '../components/Greeting';
 const pageTitle = "Página de inicio";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>Mi impresionante subtítulo del blog</h2>
-    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+  <p class="kicker">estudiante · desarrollador híbrido hardware/software</p>
+  <h2>Firmware por el día, React por la noche</h2>
+  <p>
+    Documento aquí lo que voy construyendo: desde controles electrónicos con ESP32 y RP2040
+    hasta plataformas web completas como AxDeport. Bienvenido a mi bitácora.
+  </p>
+  <Greeting client:load messages={["Compilando firmware...", "Debuggeando un fetch...", "Soldando otra placa...", "Leyendo un datasheet..."]} />
 </BaseLayout>

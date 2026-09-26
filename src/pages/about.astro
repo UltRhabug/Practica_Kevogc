@@ -1,77 +1,66 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Sobre mi";
+const pageTitle = "Sobre mí";
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Escritor técnico",
-  hobbies: ["fotografia", "observación de aves", "peñarol"],
+  firstName: "Alberto",
+  nickname: "Beto",
+  school: "CETI Colomos, Guadalajara",
+  occupation: "Estudiante de Tecnología en Desarrollo de Software",
+  hobbies: ["electrónica y sistemas embebidos", "karate", "trastear con IoT"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Redacción de documentos"];
+const skills = [
+  "ESP32 / RP2040", "Arduino", "React", "Node.js", "FastAPI",
+  "ASP.NET Core", "Firebase", "MongoDB", "Python", "Rust (aprendiendo)"
+];
 
-const happy = true;
-const finished = true;
+const buildingHybridProfile = true;
+const jobHunting = true;
 const goal = 3;
-
-const skillColor = "crimson";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style is:global define:vars={{ skillColor }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-
-    .skill {
-      color: var(--skillColor);
-      font-weight: bold;
-    }
-  </style>
-
-  <h2>... ¡y mi nuevo sitio Astro!</h2>
+  <p class="kicker">perfil híbrido — hardware + software</p>
 
   <p>
-    Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
-    página de mi sitio web, ¡y es la primera que he construido yo mismo!
+    Soy {identity.firstName} ({identity.nickname}), {identity.occupation} en {identity.school},
+    en mis últimos semestres. Combino electrónica embebida con desarrollo web full-stack:
+    de un microcontrolador ESP32 a una API en producción.
   </p>
 
   <p>
-    Este sitio se irá actualizando a medida que vaya completando más partes del
-    tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!
+    Uno de mis proyectos que más disfruté: diseñar controles electrónicos de juez para
+    competencias de karate. También estoy construyendo <strong>AxDeport</strong>, una
+    plataforma para administrar eventos de deportes de combate, junto con mi socio Leonardo.
   </p>
 
-  <p>He aquí algunos datos sobre mí:</p>
-
+  <h2>Fuera del código</h2>
   <ul>
-    <li>Me llamo {identity.firstName}.</li>
-    <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-
+    <li>Me llamo {identity.firstName}, aunque casi todos me dicen {identity.nickname}.</li>
+    <li>Estudio y trabajo desde Guadalajara, México.</li>
     {
       identity.hobbies.length >= 2 && (
         <li>
-          Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}
+          Entre mis intereses: {identity.hobbies[0]} y {identity.hobbies[1]}.
         </li>
       )
     }
   </ul>
 
-  <p>Mis habilidades son:</p>
-
-  <ul>
+  <h2>Con lo que trabajo</h2>
+  <ul class="skill-list">
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
 
-  {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+  {buildingHybridProfile && <p>Estoy construyendo activamente ese perfil híbrido hardware/software.</p>}
 
-  {finished && <p>¡He terminado este tutorial!</p>}
+  {jobHunting && <p>Ando buscando entrar a la industria electrónica de Guadalajara/Zapopan.</p>}
 
   {
     goal === 3
-      ? <p>Mi objetivo es terminar en 3 días.</p>
-      : <p>Mi objetivo no son 3 días.</p>
+      ? <p>Mi meta: publicar un proyecto nuevo en la bitácora al menos cada 3 semanas.</p>
+      : <p>Sin meta de publicación fija por ahora.</p>
   }
 </BaseLayout>

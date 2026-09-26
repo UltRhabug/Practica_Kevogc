@@ -5,18 +5,11 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
   <article>
-
-    <p>
-      Publicado el: {frontmatter.pubDate.toString().slice(0, 10)}
+    <p class="meta">
+      {frontmatter.pubDate.toString().slice(0, 10)} · {frontmatter.author}
     </p>
 
-    <p>
-      <em>{frontmatter.description}</em>
-    </p>
-
-    <p>
-      Escrito por: {frontmatter.author}
-    </p>
+    <p><em>{frontmatter.description}</em></p>
 
     <img
       src={frontmatter.image.url}
@@ -24,32 +17,12 @@ const { frontmatter } = Astro.props;
       alt={frontmatter.image.alt}
     />
 
-      <div class="tags">
+    <ul class="tags">
       {frontmatter.tags.map((tag: string) => (
-        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>
       ))}
-    </div>
+    </ul>
 
     <slot />
   </article>
 </BaseLayout>
-
-<style>
-  a {
-    color: #00539F;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: .5em;
-    padding: .5em 1em;
-    font-size: 1.15em;
-    background-color: #F8FCFD;
-  }
-</style>
